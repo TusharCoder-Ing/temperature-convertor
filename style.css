@@ -1,0 +1,157 @@
+/*Rule to Apply = font-family: 'Josefin Sans'*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+/* Variables */
+:root{
+    --main-accent: #9400d3;
+    --main-accent2: #9966cc;
+    --main-accent3: #b666d2;
+    --sub-accent: #fff0f5;
+    --sub-accent2: #E6E6FA;
+    --sub-accent3: #fffafa;
+    --nav-bar-color: #100c08;
+    --pop-out-animation: pop-out 4s 1 linear;
+    --blur-animation: blur 0.7s 1 linear;
+}
+/*Animations*/
+/*pop out animation*/
+@keyframes pop-out {
+    0%{
+      opacity: 0%;
+    }
+    50%{
+     opacity: 50%;
+    }
+    100%{
+     opacity: 100%;
+    }
+ }
+ 
+ /* Blur type animaion*/
+ @keyframes blur {
+     0%{
+         filter: blur(3px);
+     }
+     100%{
+         filter: blur(0px);
+     }
+ }
+/*Main Styling*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(
+        90deg,
+        var(--main-accent2),
+        var(--main-accent3)
+    );
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#head #welcome{
+    font-family: 'Josefin Sans';
+    font-style: italic;
+    font-weight: 800;
+    color: var(--sub-accent);
+    animation: var(--pop-out-animation);
+    text-align: center;
+    font-size: 4vw;
+    margin: 0;
+    padding: 0;
+}
+#head #welcome2{
+    font-family: 'Josefin Sans';
+    font-style: italic;
+    font-weight: 200;
+    color: var(--sub-accent);
+    animation: var(--pop-out-animation);
+    text-align: center;
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+}
+#welcome-wrapper{
+    margin-top: 5vw;
+}
+main #main-bg{
+    height: 60vh;
+    width: 60vw;
+    margin: 2vw auto;
+    padding: 0;
+    max-width: 700px;
+    max-height: 700px;
+}
+main #main #temp-head{
+   color: var(--sub-accent);
+   font-size: 5vh;
+   text-align: center;
+   margin: 15px auto;
+   padding: 0;
+   font-family: 'Josefin Sans';
+   font-weight: 500;
+}
+#user-input{
+    outline: none;
+    height: vh;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--sub-accent2);
+    width: 60vw;
+    max-width: 400px;
+    text-align: center;
+
+}
+#user-input::placeholder{
+    color: var(--tab-accent);
+    font-family: "Josefin Sans";
+    text-align: center;
+    opacity: 80%;
+    font-size: 15px;
+    letter-spacing: 0.9px;
+}
+#user-input:hover{
+    animation: var(--pop-out-animation);
+    cursor: pointer;
+}
+#user-input:focus{
+    font-family: 'Josefin Sans';
+    outline: var(--sub-accent2);
+    text-align: center;
+}
+#input-wrapper{
+    display: flex;
+    height: inherit;
+    align-items: flex-start;
+    margin: 50px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+#convert-to-celcius, #convert-to-fahrenhrit{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Josefin Sans";
+    color: var(--sub-accent2);
+    cursor: pointer;
+    width: 20vw;
+}
+#convert-to-celcius:hover, #convert-to-fahrenhrit:hover{
+    animation: var(--blur-animation);
+    background-color: var(--main-accent2);
+}
+#result{
+    font-family: "Josefin Sans";
+    color: var(--sub-accent2);
+    width: 80%;
+    text-align: center;
+
+}
